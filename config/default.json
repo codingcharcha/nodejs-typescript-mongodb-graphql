@@ -1,5 +1,6 @@
 {
     "PORT":4000,
     "DB_USER":"codingcharchabloguser",
-    "DB_PASS":"YiSGw6qIXLvtWeHU"
+    "DB_PASS":"YiSGw6qIXLvtWeHU",
+    "DB_NAME":"product_db"
 }
