@@ -63,6 +63,8 @@ export async function createProductCategoryService(product_category: IProductCat
     try{
         if(!product_category.product_category_name)
             throw new Error(`Please enter product category name`);
+        if(product_category.parent_category_id)
+            product_category.parent_category_id = new Types.ObjectId(product_category.parent_category_id)
         const newProductCategory = ProductCategory.buildProductCategory(product_category);
         return await newProductCategory.save();
     }catch(err:any){

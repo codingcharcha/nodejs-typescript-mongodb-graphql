@@ -69,7 +69,7 @@ export async function updateProductCategory(req:Request, res:Response){
 
 export async function deleteProductCategory(req:Request, res:Response){
     try{
-        const product_category_id: string = req.body.params.product_category_id;
+        const product_category_id: string = req.params.product_category_id;
         const deleted_product_category: IProductCategoryDocument | null = await deleteProductCategoryService(new Types.ObjectId(product_category_id));
         return res.status(200).json({
             message: "Product category deleted successfully",
