@@ -18,7 +18,7 @@ export interface IProductDocument extends IProduct, Document{}
 export interface IProductCategoryDocument extends IProductCategory, Document{}
 
 export interface IProductModel extends Model<IProductDocument>{
-    buidProduct(product: IProduct):IProductDocument
+    buildProduct(product: IProduct):IProductDocument
     listProducts():Promise<IProductDocument[]>
     getProduct(product_id: Types.ObjectId):Promise<IProductDocument | null>
     updateProduct(product_id: Types.ObjectId, product: IProduct):Promise<IProductDocument>

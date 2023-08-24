@@ -42,7 +42,7 @@ const ProductSchema = new Schema({
 
 });
 
-ProductSchema.statics.buidProduct=(product: IProduct): IProductDocument=>{
+ProductSchema.statics.buildProduct=(product: IProduct): IProductDocument=>{
     return new Product(product)
 }
 

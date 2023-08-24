@@ -13,7 +13,7 @@ export async function createProductService(product: IProduct): Promise<IProductD
         if(!product.product_price)
             throw new Error(`Please enter product price`)
         
-        const newProduct: IProductDocument = Product.buidProduct(product);
+        const newProduct: IProductDocument = Product.buildProduct(product);
         return await newProduct.save(); 
     }catch(err:any){
         throw new Error(`Something went wrong - ${err.message}`);
